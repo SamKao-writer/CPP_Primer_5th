@@ -5,21 +5,26 @@
 
 #include <iostream>
 
+void swap(int *a, int *b)
+{
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
 int main()
 {
     int val1 = 0, val2 = 0;
     std::cout << "Enter two numbers: " << std::endl;
     std::cin >> val1 >> val2;
 
-    // test if val1 >= val2
-    if (val2 > val1) {
-        val1 = val1 ^ val2;
-        val2 = val1 ^ val2;
-        val1 = val1 ^ val2;
-    }
+    if (val1 > val2)
+        swap(&val1, &val2);
 
-    for (int i = val2; i <= val1; ++i)
-        std::cout << i << std::endl;
+    while (val1 <= val2) {
+        std::cout << val1 << std::endl;
+        ++val1;
+    }
 
     return 0;
 }
