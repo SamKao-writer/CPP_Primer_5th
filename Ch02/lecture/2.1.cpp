@@ -1,3 +1,4 @@
+#include <iostream>
 int main(int argc, char *argv[])
 {
     bool b = 42;           // b is true
@@ -6,6 +7,6 @@ int main(int argc, char *argv[])
     double pi = i;         // pi has value 3.0
     unsigned char c = -1;  // assuming 8-bit chars, c has value 255
     signed char c2 = 256;  // assuming 8-bit chars, the value of c2 is undefined
-
+    // std::cout << c2 << std::endl;
     return 0;
 }
